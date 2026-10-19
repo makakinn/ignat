@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мой сайт</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0eaff;
+  color: #222;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  width: 180px;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 4px 10px #aaa;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px #8b5cf6;
+}
+
+.purple { background: #8b5cf6; }
+.pink { background: #ec4899; }
+.blue { background: #3b82f6; }
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+  background:
+    linear-gradient(rgba(80,0,150,0.6), rgba(0,0,80,0.7)),
+    linear-gradient(45deg, #9333ea, #2563eb),
+    url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=1200");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #ec4899;
+  color: white;
+  cursor: pointer;
+}
+
+.glass {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.glass-card {
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+h2 {
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Добро пожаловать!</h1>
+  <p>Мой современный и красивый сайт</p>
+  <button onclick="location.href='#colors'">Начать</button>
+</div>
+
+<h2 id="colors">Палитра цветов</h2>
+
+<div class="colors">
+  <div class="card">
+    <div class="purple" style="height:80px;border-radius:10px"></div>
+    <h3>Фиолетовый</h3>
+    <p>#8b5cf6</p>
+  </div>
+
+  <div class="card">
+    <div class="pink" style="height:80px;border-radius:10px"></div>
+    <h3>Розовый</h3>
+    <p>#ec4899</p>
+  </div>
+
+  <div class="card">
+    <div class="blue" style="height:80px;border-radius:10px"></div>
+    <h3>Синий</h3>
+    <p>#3b82f6</p>
+  </div>
+</div>
+
+<h2>Glassmorphism</h2>
+
+<div class="glass">
+  <div class="glass-card">
+    <h3>Эффект матового стекла</h3>
+    <p>Прозрачный фон и backdrop-filter: blur(10px).</p>
+  </div>
+</div>
+
+</body>
+</html>
